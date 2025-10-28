@@ -27,7 +27,7 @@ A transação é paga por um **relayer** (servidor backend), enquanto a assinatu
 
 **Fluxo básico:**
 
-```
+\`\`\`
 [Usuário acessa site]
         ↓
 Conecta carteira MetaMask
@@ -41,13 +41,13 @@ Relayer envia transação para Sepolia (paga gas)
 Contrato valida assinatura e faz mint
         ↓
 Usuário recebe NFT no endereço
-```
+\`\`\`
 
 ---
 
 ## 🧱 Arquitetura de pastas
 
-```
+\`\`\`
 nft-gasless-mint/
 │
 ├── contracts/
@@ -103,7 +103,7 @@ nft-gasless-mint/
 └── scripts/
     ├── init.sh
     └── start-dev.sh
-```
+\`\`\`
 
 ---
 
@@ -165,49 +165,49 @@ nft-gasless-mint/
 ## 🔐 Ambiente e variáveis
 
 ### Arquivo `.env` no backend:
-```bash
+\`\`\`bash
 RPC_URL=https://eth-sepolia.g.alchemy.com/v2/SEU_API_KEY
 RELAYER_PRIVATE_KEY=CHAVE_PRIVADA_DO_RELAYER
 CONTRACT_ADDRESS=0xSEU_CONTRATO
 PORT=3001
-```
+\`\`\`
 
 ---
 
 ## 🚀 Como executar
 
 ### 1. Instalar dependências
-```bash
+\`\`\`bash
 # Windows PowerShell
 .\scripts\init.ps1
-```
+\`\`\`
 
 ### 2. Configurar variáveis de ambiente
 - Copie `.env.example` para `backend/.env`
 - Preencha com suas credenciais
 
 ### 3. Deploy do contrato
-```bash
+\`\`\`bash
 cd contracts
 npm run deploy
-```
+\`\`\`
 
 ### 4. Iniciar servidores
-```bash
+\`\`\`bash
 # Modo desenvolvimento
 .\scripts\start-dev.ps1
 
 # Ou com Docker
 docker-compose up
-```
+\`\`\`
 
 ---
 
 ## 🐳 Docker Compose
 
-```bash
+\`\`\`bash
 docker-compose up --build
-```
+\`\`\`
 
 Acesse:
 - Frontend: http://localhost:3000
